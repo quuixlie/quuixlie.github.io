@@ -1,0 +1,27 @@
+header > img:nth-child(1) {
+    height: 32px;
+}
+
+header > img:nth-child(2) {
+    height: 22px;
+}
+
+@media only screen and (min-width: 500px) {
+    header > img:nth-child(1) {
+        height: 42px;
+    }
+    
+    header > img:nth-child(2) {
+        height: 32px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    header > img:nth-child(1) {
+        height: 64px;
+    }  
+
+    header > img:nth-child(2) {
+        display: none;
+    }  
+}
