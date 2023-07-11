@@ -15,7 +15,6 @@ html {
 
 body {
     background-color: black;
-    height: 200vh;
 }
 
 header {
@@ -23,7 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    padding: 16px;
+    padding: 20px;
     width: 100%;
     position: fixed;
     z-index: 1000;
