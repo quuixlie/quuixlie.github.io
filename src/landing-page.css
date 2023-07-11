@@ -34,7 +34,7 @@
 }
 
 .scroll-down > img {
-    max-width: 25px;
+    width: 25px;
 }
 
 #social-media {
@@ -64,7 +64,7 @@
     }
 
     #social-media > img {
-        height: 48px;
+        width: 35px;
     }
 }
 
@@ -76,6 +76,10 @@
     #landing-page > img {
         right: 160px;
         width: 50vw;
+    }
+
+    #social-media > img {
+        width: 55px;
     }
 
     #landing-page .content > p {
