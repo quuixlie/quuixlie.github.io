@@ -1,0 +1,37 @@
+#about-me {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about-me > div:nth-child(1) {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#about-me > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 830px) {
+    #about-me {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #about-me p {
+        max-width: 700px;
+    }
+
+    #about-me > div:nth-child(2) {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
