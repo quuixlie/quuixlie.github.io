@@ -1,0 +1,172 @@
+#projects {
+    margin-bottom: 15vh;
+    height: 100vh;
+}
+
+#projects-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects-header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.horizontal-line {
+    background-color: white;
+    width: 100%;
+    height: 1px;
+}
+
+.vertical-line {
+    background-color: white;
+    width: 1px;
+    height: 30vh;
+}
+
+#vertical-box {
+    position: absolute;
+    right: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#vertical-box > p {
+    width: 10px;
+}
+
+#github-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-showcase {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 64px;
+    height: 60vh;
+}
+
+#gray-box {
+    width: 100%;
+    position: relative;
+    right: 32px;
+    height: 60vh;
+    background-color: #DBDBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 0px 20px;
+}
+
+#white-box {
+    background-color: white;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow-right {
+    position: absolute;
+    right: -32px;
+    z-index: 1000;
+}
+
+#arrow-right > img {
+    width: 90px;
+}
+
+.cart {
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.cart > h1 {
+    left: 40px;
+    position: absolute;
+    bottom: 60px;
+}
+
+.cart > p {
+    left: 40px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.cart > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#arrow-left {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    bottom: 20px;
+}
+
+#arrow-left > img {
+    width: 100%;
+}
+
+#white-box > div:nth-child(2) {
+    display: none;
+}
+
+#white-box > div:nth-child(3) {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    #vertical-box { 
+        right: 60px;
+    }
+
+    #gray-box {
+        right: 64px;
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    #white-box > div:nth-child(2) {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #vertical-box { 
+        right: 155px;
+    }
+
+    #gray-box {
+        right: 160px;
+    }
+
+    #arrow-right > img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    #white-box > div:nth-child(3) {
+        display: block;
+    }
+}

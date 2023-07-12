@@ -11,6 +11,7 @@
     position: absolute;
     right: 0;
     top: calc(50vh - 30vh);
+    object-fit: cover;
     z-index: -1000;
 }
 
