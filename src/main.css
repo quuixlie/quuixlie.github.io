@@ -52,21 +52,22 @@ main {
 }
 
 .cart > h1 {
-    left: 2rem;
+    left: 1rem;
     position: relative;
-    bottom: 10rem;
+    bottom: 7rem;
 }
 
 .cart > p {
     position: relative;
-    left: 2rem;
-    bottom: 10rem;
+    left: 1rem;
+    bottom: 7rem;
 }
 
 .cart > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
 .icon {
