@@ -1,5 +1,4 @@
 #projects {
-    margin-bottom: 15vh;
     height: 100vh;
 }
 
@@ -7,15 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #projects-header > div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    width: 100%;
+    gap: 1rem;
+    width: calc(100% - 1rem); 
 }
 
 .horizontal-line {
@@ -24,107 +21,71 @@
     height: 1px;
 }
 
+#vertical-box {
+    position: absolute;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 1rem;
+}
+
 .vertical-line {
     background-color: white;
     width: 1px;
     height: 30vh;
 }
 
-#vertical-box {
-    position: absolute;
-    right: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-}
-
-#vertical-box > p {
-    width: 10px;
-}
-
-#github-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #project-showcase {
-    width: 100%;
-    margin-top: 32px;
-    margin-bottom: 64px;
+    margin-top: 1rem;
+    margin-bottom: calc(1rem + 20px);
     height: 60vh;
+    position: relative;
+    right: 4rem;
 }
 
 #gray-box {
-    width: 100%;
-    position: relative;
-    right: 32px;
     height: 60vh;
     background-color: #DBDBDB;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px 0px 20px;
+    padding: 2rem 1rem 0px 1rem;
 }
 
 #white-box {
     background-color: white;
-    width: 100%;
-    height: 60vh;
+    height: inherit;
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
-}
-
-#arrow-right {
-    position: absolute;
-    right: -32px;
-    z-index: 1000;
-}
-
-#arrow-right > img {
-    width: 90px;
-}
-
-.cart {
-    padding: 20px;
-    height: 100%;
     position: relative;
-}
-
-.cart > h1 {
-    left: 40px;
-    position: absolute;
-    bottom: 60px;
-}
-
-.cart > p {
-    left: 40px;
-    position: absolute;
-    bottom: 40px;
-}
-
-.cart > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 #arrow-left {
     position: absolute;
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-    left: 0;
-    bottom: 20px;
+    left: 0px;
+    z-index: 100;
 }
 
 #arrow-left > img {
-    width: 100%;
+    width: 6rem;
+}
+
+#arrow-right {
+    position: absolute;
+    right: 0px;
+    z-index: 100;
+}
+
+#arrow-right > img {
+    width: 6rem;
+}
+
+#github-button {
+    display: flex;
+    justify-content: center;
 }
 
 #white-box > div:nth-child(2) {
@@ -135,38 +96,16 @@
     display: none;
 }
 
-@media only screen and (min-width: 500px) {
-    #vertical-box { 
-        right: 60px;
-    }
-
-    #gray-box {
-        right: 64px;
-    }
-}
-
 @media only screen and (min-width: 830px) {
     #white-box > div:nth-child(2) {
         display: block;
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    #vertical-box { 
-        right: 155px;
-    }
-
-    #gray-box {
-        right: 160px;
-    }
-
-    #arrow-right > img {
-        width: 100%;
+        padding-left: 0;
     }
 }
 
 @media only screen and (min-width: 1450px) {
     #white-box > div:nth-child(3) {
         display: block;
+        padding-left: 0;
     }
 }

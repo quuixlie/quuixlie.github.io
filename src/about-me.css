@@ -5,21 +5,20 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 }
 
-#about-me > div:nth-child(1) {
+#about-me-content {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
 }
 
-#about-me > div:nth-child(2) {
+#aside-content {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 1rem;
 }
 
 @media only screen and (min-width: 830px) {
@@ -28,12 +27,16 @@
         justify-content: space-between;
     }
 
-    #about-me p {
-        max-width: 700px;
-    }
-
-    #about-me > div:nth-child(2) {
+    #aside-content {
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    #aside-content {
+        flex: 1;
+    }
+
+    #about-me-content {
+        flex: 2;
     }
 }
