@@ -13,12 +13,14 @@
     </head>
     <body>
         <header>
-            <img src="assets/logo.png" alt="logo">
+            <a href="#landing-page">
+                <img class="logo" src="assets/logo.png" alt="logo">
+            </a>
             <img src="assets/menu.png" alt="menu">
             <nav>
                 <ul>
-                    <li>About me</li>
-                    <li>Projects</li>
+                    <li><a href="#about-me-href">About me</a></li>
+                    <li><a href="#projects-href">Projects</a></li>
                 </ul>
                 <button class="filled-button">Contact</button>
             </nav>
@@ -29,7 +31,7 @@
                 <div id="landing-page-content">
                     <h1>I am a Software Engineer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur. Nunc ullamcorper magna commodo tellus aliquam quis molestie blandit. Quis pharetra augue sed magna consequat augue ut. Neque libero vitae fames tellus scelerisque.</p>
-                    <button class="filled-button">Begin</button>
+                    <button class="filled-button" onclick="location.href='#about-me-href'">Begin</button>
                 </div>
                 <div id="social-media">
                     <img class="icon" src="assets/twitter.png" alt="twitter icon">
@@ -37,17 +39,18 @@
                     <img class="icon" src="assets/instagram.png" alt=" instagram icon">
                     <img class="icon" src="assets/youtube.png" alt="youtube icon">
                 </div>
-                <div class="scroll-down">
+                <div class="scroll-down" id="scroll-down">
                     <img class="icon" src="assets/arrow-down.png" alt="arrow down">
                     <img class="icon" src="assets/mouse-scrolling.png" alt="arrow down">
                 </div>
             </section>
             <section id="about-me">
-                <div id="about-me-content">
+                <div id="about-me-href"></div>
+                <div id="about-me-content" class="reveal">
                     <h1>About me</h1>
                     <p>Lorem ipsum dolor sit amet consectetur. At sagittis ligula ac orci porttitor. Turpis metus massa suspendisse mauris pulvinar dui nec. A vel bibendum sit a scelerisque imperdiet tellus quisque et. Nunc non sit cursus porta posuere facilisis blandit dictumst.</p>
                 </div>
-                <aside id="aside-content">
+                <aside id="aside-content" class="reveal">
                     <div>
                         <h2>Skills</h2>
                         <p>Python, CSS, HTML, Unreal Engine, C++, Python, CSS, HTML, Unreal Engine, C++</p>
@@ -60,10 +63,11 @@
                 </aside>
             </section>
             <section id="projects">
+                <div id="projects-href"></div>
                     <div id="projects-header">
                         <div>
                             <div class="horizontal-line"></div>
-                            <h1>Projects</h1>
+                            <h1 class="reveal">Projects</h1>
                             <div class="horizontal-line">
                                 <div id="vertical-box">
                                     <div class="vertical-line"></div>
@@ -72,22 +76,22 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Find some best my projects</p>
+                        <p class="reveal">Find some best my projects</p>
                     </div>
-                    <div id="project-showcase">
+                    <div id="project-showcase" class="reveal">
                         <div id="gray-box">
                             <div id="white-box">
-                                <div class="cart" data-tilt data-tilt-scale="1.05">
+                                <div class="cart">
                                     <img src="assets/landing-page-img.png" alt="">
                                     <h1>Projects</h1>
                                     <p>This project is good</p>
                                 </div>
-                                <div class="cart" data-tilt data-tilt-scale="1.05">
+                                <div class="cart">
                                     <img src="assets/landing-page-img.png" alt="">
                                     <h1>Projects</h1>
                                     <p>This project is good</p>
                                 </div>
-                                <div class="cart" data-tilt data-tilt-scale="1.05">
+                                <div class="cart">
                                     <img src="assets/landing-page-img.png" alt="">
                                     <h1>Projects</h1>
                                     <p>This project is good</p>
@@ -101,8 +105,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="github-button">
-                        <button class="filled-button">Github</button>
+                    <div id="github-button" class="reveal">
+                        <button class="filled-button" onclick="location.href='https://github.com/quuixly'">Github</button>
                     </div> 
             </section>
         </main>
@@ -116,5 +120,6 @@
             </div>
         </footer>
         <script type="text/javascript" src="src/vanilla-tilt.min.js"></script>
+        <script type="text/javascript" src="src/scroll-animation.js"></script>
     </body>
 </html>

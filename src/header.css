@@ -9,8 +9,13 @@ header {
     z-index: 10000;
 }
 
-header > img:nth-child(1) {
+.logo {
     height: 2.5rem;
+    transition: 0.3s;
+}
+
+.logo:active {
+    transform: scale(1.1);
 }
 
 header > img:nth-child(2) {
@@ -19,6 +24,24 @@ header > img:nth-child(2) {
 
 nav {
     display: none;
+}
+
+nav li {
+    transition: 0.3s;
+}
+
+nav li:active {
+    transform: scale(1.1);
+}
+
+nav a:link {
+    text-decoration: none;
+    color: inherit;
+}
+  
+nav a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media only screen and (min-width: 1100px) {

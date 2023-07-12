@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
+@keyframes levitate {
+    0% {
+        transform: translate(0, -10px);
+    }
+
+    75% {
+        transform: translate(0, 1px);
+    }
+
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +25,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,6 +55,12 @@ p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filled-button:active {
+    transform: scale(1.1);
 }
 
 main {
@@ -49,6 +70,11 @@ main {
 .cart {
     padding: 2rem;
     height: 100%;
+    transition: 0.3s;
+}
+
+.cart:hover {
+    transform: scale(1.05);
 }
 
 .cart > h1 {
@@ -73,6 +99,18 @@ main {
 .icon {
     height: 2rem;
     width: 2rem;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @media only screen and (min-width: 500px) {
