@@ -60,6 +60,7 @@
 }
 
 #white-box {
+    flex: 1;
     background-color: white;
     height: inherit;
     display: flex;

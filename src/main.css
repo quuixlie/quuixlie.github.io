@@ -68,6 +68,7 @@ main {
 }
 
 .cart {
+    flex: 1;
     padding: 2rem;
     height: 100%;
     transition: 0.3s;
@@ -103,10 +104,10 @@ main {
 
 .reveal {
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(25px);
     opacity: 0;
     transition: 1s all ease;
-  }
+}
   
 .reveal.active {
     transform: translateY(0);
