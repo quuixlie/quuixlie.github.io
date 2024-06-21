@@ -9,6 +9,12 @@ header {
     z-index: 10000;
 }
 
+header > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo {
     height: 2.5rem;
     transition: 0.3s;

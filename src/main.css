@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
 
 @keyframes levitate {
     0% {
@@ -33,33 +34,83 @@ body {
 }
 
 h1 {
-    font-weight: 400;
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     font-size: 3rem;
 }
 
 strong {
     font-size: 1rem;
-    font-weight: 400;
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 p {
-    max-width: 830px;
+    max-width: 850px;
 }
 
 .filled-button {
     background-color: white;
-    outline-style: none;
     border: none;
+    transition: box-shadow .1s linear, transform 0.3s linear;
+}
+
+.filled-button:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255,0.6);
+}
+
+.ghost-button {
+    background: none;
+    border: 2px solid #ffffff;
+    color: white;
+    transition: color 0.4s linear, transform 0.3s linear;
+}
+
+button {
+    outline-style: none;
     width: 116px;
     height: 42px;
+    position: relative;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.filled-button:active {
+.ghost-button:hover {
+    color: black;
+}
+
+.ghost-button::before {
+    background: white;
+}
+
+.ghost-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 101%;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.ghost-button::before {
+    transform: scaleX(0);
+}
+
+.ghost-button:hover::before {
+    transform: scaleX(1);
+}
+
+button:active {
     transform: scale(1.1);
 }
 
@@ -108,7 +159,7 @@ main {
         font-size: 16px;
     }
 
-    .filled-button  {
+    button {
         width: 144px;
         height: 48px;
     }
@@ -119,14 +170,8 @@ main {
         font-size: 24px;
     }
 
-    .filled-button  {
+    button {
         width: 192px;
         height: 64px;
-    }
-
-    #landing-page button {
-        background-color: transparent;
-        border: 3px solid #FFF;
-        color: white;
     }
 }

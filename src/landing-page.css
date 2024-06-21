@@ -54,7 +54,7 @@
 
 @media only screen and (min-width: 1100px) {
     #landing-page > img {
-        right: 15vh;
-        width: 50vw;
+        right: 9%;
+        width: 50%;
     }
 }
