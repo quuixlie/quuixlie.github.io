@@ -15,7 +15,7 @@ function closeMenu() {
 // Drag
 const gallery = document.querySelector("#gallery");
 let isDragging = false;
-let startX, startScrollLeft;
+let startX = 0, startScrollLeft = 0;
 
 
 const dragStart = (e) => {
@@ -32,7 +32,16 @@ const dragStop = () => {
 
 const dragging = (e) => {
     if (!isDragging) return;
-    gallery.scrollLeft = startScrollLeft - (e.pageX - startX);
+    const newScrollLeft = startScrollLeft - (e.pageX - startX);
+
+    if (newScrollLeft <= 0 || newScrollLeft >=
+        gallery.scrollWidth - gallery.offsetWidth) {
+
+        isDragging = false;
+        return;
+    }
+
+    gallery.scrollLeft = newScrollLeft;
 }
 
 gallery.addEventListener("mousedown", dragStart);
@@ -45,11 +54,11 @@ const arrowRight = document.querySelector("#arrow-right");
 const cartWidth = document.querySelector(".cart").offsetWidth;
 
 const previousProject = () => {
-    gallery.scrollLeft -= cartWidth;
+    gallery.scrollLeft -= cartWidth * 1.3;
 }
 
 const nextProject = () => {
-    gallery.scrollLeft += cartWidth;
+    gallery.scrollLeft += cartWidth * 1.3;
 }
 
 arrowLeft.addEventListener("click", previousProject);

@@ -75,13 +75,14 @@
 }
 
 #gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    gap: 2rem;
     position: relative;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 #gallery.dragging {
@@ -118,4 +119,16 @@
 #github-button {
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+    #gallery {
+        grid-template-columns: repeat(4, 66.6666%);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #gallery {
+        grid-template-columns: repeat(4, 33.3333%);
+    }
 }
