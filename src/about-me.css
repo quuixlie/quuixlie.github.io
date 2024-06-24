@@ -18,12 +18,19 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 #aside-content {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+
+#aside-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 @media only screen and (min-width: 830px) {
