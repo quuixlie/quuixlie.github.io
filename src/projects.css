@@ -64,19 +64,38 @@
 }
 
 #white-box {
-    flex: 1;
     background-color: white;
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 2rem;
     box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+#gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#gallery.dragging {
+    scroll-behavior: auto;
+}
+
+#gallery.dragging * {
+    cursor: grab;
+    user-select: none;
 }
 
 #arrow-left {
     position: absolute;
-    left: 0px;
+    left: 0;
     z-index: 100;
     cursor: pointer;
 }
@@ -87,7 +106,7 @@
 
 #arrow-right {
     position: absolute;
-    right: 0px;
+    right: 0;
     z-index: 100;
     cursor: pointer;
 }
@@ -99,26 +118,4 @@
 #github-button {
     display: flex;
     justify-content: center;
-}
-
-#white-box > div:nth-child(2) {
-    display: none;
-}
-
-#white-box > div:nth-child(3) {
-    display: none;
-}
-
-@media only screen and (min-width: 830px) {
-    #white-box > div:nth-child(2) {
-        display: block;
-        padding-left: 0;
-    }
-}
-
-@media only screen and (min-width: 1450px) {
-    #white-box > div:nth-child(3) {
-        display: block;
-        padding-left: 0;
-    }
 }

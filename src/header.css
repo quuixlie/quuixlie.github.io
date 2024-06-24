@@ -86,7 +86,12 @@ header > img {
     cursor: pointer;
 }
 
-#menu-nav > div:nth-child(3) {
+#menu-nav > button {
+    margin-top: 0.5rem;
+
+}
+
+#menu-nav > div:nth-child(4) {
     margin-bottom: 2rem;
     margin-top: 2rem;
 }

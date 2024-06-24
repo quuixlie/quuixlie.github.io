@@ -9,7 +9,7 @@
     right: 0;
     top: 15vh;
     z-index: -10000;
-    background: linear-gradient(90deg, rgba(0,0,0,0.87) 10%, rgba(0,0,0,0.60) 20%, rgba(0, 0, 0, 0.5) 60%, rgba(0,0,0,0) 100%), url("/assets/landing-page-img.png");
+    background: linear-gradient(90deg, rgba(0,0,0,0.87) 10%, rgba(0,0,0,0.60) 40%, rgba(0, 0, 0, 0.5) 100%, rgba(0,0,0,0.5) 100%), url("/assets/landing-page-img.png");
     background-size: cover;
     background-position: center;
 }
@@ -52,6 +52,12 @@
         top: calc(50vh - 5.25rem);
         right: 2rem;
         padding: 0.5rem;
+    }
+
+    .landing-page-background {
+        background: linear-gradient(90deg, rgba(0,0,0,0.87) 10%, rgba(0,0,0,0.60) 30%, rgba(0, 0, 0, 0.5) 60%, rgba(0,0,0,0) 100%), url("/assets/landing-page-img.png");
+        background-size: cover;
+        background-position: center;
     }
 }
 
