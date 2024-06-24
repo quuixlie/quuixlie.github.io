@@ -122,10 +122,6 @@ main {
     cursor: pointer;
 }
 
-.cart:hover {
-    transform: scale(1.05);
-}
-
 .cart > img {
     height: 100%;
     width: 100%;
@@ -162,6 +158,12 @@ main {
     button {
         width: 144px;
         height: 48px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .cart:hover {
+        transform: scale(1.05);
     }
 }
 

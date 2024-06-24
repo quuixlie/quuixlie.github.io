@@ -13,10 +13,28 @@
     </head>
     <body>
         <header>
-            <a href="#landing-page">
-                <img class="logo" src="assets/logo.png" alt="logo">
-            </a>
-            <img src="assets/menu.png" alt="menu">
+            <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="location.href='#landing-page'">
+            <img src="assets/menu.png" class="menu-icon" alt="menu" onclick="openMenu()">
+            <div id="menu" style="display: none">
+                <div id="menu-header">
+                    <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="location.href='#landing-page'; closeMenu()">
+                    <img id="close-menu" class="menu-icon" src="assets/close.png" alt="close" onclick="closeMenu()">
+                </div>
+                <div id="menu-nav">
+                    <div class="menu-nav-item" onclick="location.href='#about-me-href'; closeMenu()">
+                        <h1>About me</h1>
+                        <p>A short story about me</p>
+                    </div>
+                    <div class="menu-nav-item" onclick="location.href='#projects-href'; closeMenu()">
+                        <h1>Projects</h1>
+                        <p>Some of my best projects</p>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="quote">
+                        <p>“The present is theirs; the future, for which I really worked, is mine.” - <i>Nicola Tesla</i></p>
+                    </div>
+                </div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about-me-href">About me</a></li>
@@ -27,7 +45,7 @@
         </header>
         <main>
             <section id="landing-page">
-                <img src="assets/landing-page-img.png" role="presentation">
+                <div class="landing-page-background"></div>
                 <div id="landing-page-content" >
                     <h1>I am a Software Engineer</h1>
                     <p>The target product is like a work of art to me. A well-chosen name for a function or variable, high performance, an eye-catching design and a good UX are the factors that must be fulfilled for me to consider my project at least good.</p>
@@ -113,5 +131,6 @@
             </div>
         </footer>
         <script type="text/javascript" src="src/scroll-animation.js"></script>
+        <script type="text/javascript" src="src/menu.js"></script>
     </body>
 </html>
