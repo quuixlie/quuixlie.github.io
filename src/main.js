@@ -1,15 +1,25 @@
 function openMenu() {
     let menu = document.getElementById("menu");
     menu.style.display = "flex";
-    menu.style.transition = "all 0.7s ease-in-out";
+    menu.style.transition = "all 0.6s ease-in-out";
     menu.style.transform = "translate(0, 0)";
+    setTimeout(() => {
+        for (const child of menu.children) {
+            child.style.opacity = "1";
+        }
+    }, 500);
     document.querySelector("body").style.overflow = "hidden";
 }
 
 function closeMenu() {
     let menu = document.getElementById("menu");
-    menu.style.transition = "all 0.3s ease-in-out";
-    menu.style.transform = "translate(100%, 0)";
+    for (const child of menu.children) {
+        child.style.opacity = "0";
+    }
+    setTimeout(() => {
+        menu.style.transition = "all 0.3s ease-in-out";
+        menu.style.transform = "translate(100%, 0)";
+    }, 400);
     document.querySelector("body").style.overflow = "auto";
 }
 
