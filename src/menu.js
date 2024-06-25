@@ -35,12 +35,16 @@ const dragging = (e) => {
     gallery.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
-gallery.addEventListener("mousedown", dragStart);
-gallery.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-gallery.addEventListener("touchstart", dragStart);
-gallery.addEventListener("touchmove", dragging);
-document.addEventListener("touchend", dragStop);
+// prevent menu popup on long press
+window.oncontextmenu = function (event) {
+    event.preventDefault()
+    event.stopPropagation()
+    return false
+}
+
+gallery.addEventListener("pointerdown", dragStart);
+gallery.addEventListener("pointermove", dragging);
+document.addEventListener("pointerup", dragStop);
 
 // Buttons
 const arrowLeft = document.querySelector("#arrow-left");
