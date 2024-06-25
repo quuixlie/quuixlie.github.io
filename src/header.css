@@ -94,6 +94,7 @@ header > img {
 #menu-nav > div:nth-child(4) {
     margin-bottom: 4rem;
     margin-top: 2rem;
+    background-color: gray;
 }
 
 .quote {
