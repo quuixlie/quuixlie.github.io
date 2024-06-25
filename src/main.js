@@ -17,17 +17,31 @@ const gallery = document.querySelector("#gallery");
 let isDragging = false;
 let startX = 0, startScrollLeft = 0;
 
+function disableScroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    window.onscroll = function() {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
+}
+
+function enableScroll() {
+    window.onscroll = function() {};
+}
 
 const dragStart = (e) => {
     isDragging = true;
     gallery.classList.add("dragging");
     startX = e.pageX;
     startScrollLeft = gallery.scrollLeft;
+    disableScroll();
 }
 
 const dragStop = () => {
     isDragging = false;
     gallery.classList.remove("dragging");
+    enableScroll();
 }
 
 const dragging = (e) => {
