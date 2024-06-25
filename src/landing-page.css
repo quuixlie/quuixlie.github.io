@@ -54,7 +54,12 @@
         padding: 0.5rem;
     }
 
-    #social-media > img {
+    #social-media a {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #social-media img {
         cursor: pointer;
     }
 

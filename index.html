@@ -14,56 +14,82 @@
     </head>
     <body>
         <header>
-            <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="location.href='#landing-page'">
+            <a href="#landing-page">
+                <img class="menu-icon" src="assets/logo.png" alt="logo">
+            </a>
+
             <img src="assets/menu.png" class="menu-icon" alt="menu" onclick="openMenu()">
-            <div id="menu" style="display: none">
+            <div id="menu">
                 <div id="menu-header">
-                    <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="location.href='#landing-page'; closeMenu()">
+                    <a href="#landing-page">
+                        <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="closeMenu()">
+                    </a>
                     <img id="close-menu" class="menu-icon" src="assets/close.png" alt="close" onclick="closeMenu()">
                 </div>
                 <div id="menu-nav">
-                    <div class="menu-nav-item" onclick="location.href='#about-me-href'; closeMenu()">
-                        <h1>About me</h1>
-                        <p>A short story about me</p>
-                    </div>
-                    <div class="menu-nav-item" onclick="location.href='#projects-href'; closeMenu()">
-                        <h1>Projects</h1>
-                        <p>Some of my best projects</p>
-                    </div>
-                    <button class="filled-button" onclick="location.href='https://x.com/quuixlie'">Contact</button>
+                    <a href="#about-me-href">
+                        <div class="menu-nav-item" onclick="closeMenu()">
+                            <h1>About me</h1>
+                            <p>A short story about me</p>
+                        </div>
+                    </a>
+                    <a href="#projects-href">
+                        <div class="menu-nav-item" onclick="closeMenu()">
+                            <h1>Projects</h1>
+                            <p>Some of my best projects</p>
+                        </div>
+                    </a>
+                    <a href="https://x.com/quuixlie" target="_blank">
+                        <button class="filled-button" onclick="closeMenu()">Contact</button>
+                    </a>
                     <div class="horizontal-line"></div>
                     <div class="quote">
                         <p>“The present is theirs; the future, for which I really worked, is mine.” - <i>Nicola Tesla</i></p>
                     </div>
                 </div>
             </div>
+
             <nav>
                 <ul>
                     <li><a href="#about-me-href">About me</a></li>
                     <li><a href="#projects-href">Projects</a></li>
                 </ul>
-                <button class="filled-button" onclick="location.href='https://x.com/quuixlie'">Contact</button>
+                <a href="https://x.com/quuixlie" target="_blank">
+                    <button class="filled-button" onclick="closeMenu()">Contact</button>
+                </a>
             </nav>
         </header>
+
         <main>
             <section id="landing-page">
                 <div class="landing-page-background"></div>
                 <div id="landing-page-content" >
                     <h1>I am a Software Engineer</h1>
                     <p>The target product is like a work of art to me. A well-chosen name for a function or variable, high performance, an eye-catching design and a good UX are the factors that must be fulfilled for me to consider my project at least good.</p>
-                    <button class="ghost-button" onclick="location.href='#about-me-href'">Begin</button>
+                    <a href="#about-me-href">
+                        <button class="ghost-button">Begin</button>
+                    </a>
                 </div>
                 <div id="social-media">
-                    <img class="icon" src="assets/twitter.png" alt="twitter icon" onclick="location.href='https://x.com/quuixlie'">
-                    <img class="icon" src="assets/github.png" alt="github icon" onclick="location.href='https://github.com/quuixlie'">
-                    <img class="icon" src="assets/instagram.png" alt="instagram icon" onclick="location.href='https://www.instagram.com/quuixlie'">
-                    <img class="icon" src="assets/youtube.png" alt="youtube icon" onclick="location.href='https://youtube.com/@quuixlie'">
+                    <a href="https://x.com/quuixlie" target="_blank">
+                        <img class="icon" src="assets/twitter.png" alt="twitter icon">
+                    </a>
+                    <a href="https://github.com/quuixlie" target="_blank">
+                        <img class="icon" src="assets/github.png" alt="github icon">
+                    </a>
+                    <a href="https://www.instagram.com/quuixlie" target="_blank">
+                        <img class="icon" src="assets/instagram.png" alt="instagram icon">
+                    </a>
+                    <a href="https://youtube.com/@quuixlie" target="_blank">
+                        <img class="icon" src="assets/youtube.png" alt="youtube icon">
+                    </a>
                 </div>
                 <div class="scroll-down" id="scroll-down">
                     <img class="icon" src="assets/arrow-down.png" role="presentation">
                     <img class="icon" src="assets/mouse-scrolling.png" role="presentation">
                 </div>
             </section>
+
             <section id="about-me">
                 <div id="about-me-href"></div>
                 <div id="about-me-content" class="reveal">
@@ -81,6 +107,7 @@
                     </div>
                 </aside>
             </section>
+
             <section id="projects">
                 <div id="projects-href"></div>
                     <div id="projects-header">
@@ -102,32 +129,40 @@
                             <div id="white-box">
                                 <div id="gallery">
                                     <div class="cart">
-                                        <img src="assets/project1.jpeg" alt="third project" draggable="false">
-                                        <div onclick="location.href='https://github.com/quuixlie/Backgammon'">
-                                            <h1>The Backgammon</h1>
-                                            <p>Backgammon written in C using the NCurses library.</p>
-                                        </div>
+                                        <img src="assets/project1.jpg" alt="third project" draggable="false">
+                                        <a href="https://github.com/quuixlie/Backgammon" target="_blank">
+                                            <div>
+                                                <h1>The Backgammon</h1>
+                                                <p>Backgammon written in C using the NCurses library.</p>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="cart">
-                                        <img src="assets/project2.jpeg" alt="third project" draggable="false">
-                                        <div onclick="location.href='https://github.com/quuixlie/SteganoAI'">
-                                            <h1>SteganoAI</h1>
-                                            <p>Hide your message using steganography and ChatGPT.</p>
-                                        </div>
+                                        <img src="assets/project2.jpg" alt="third project" draggable="false">
+                                        <a href="https://github.com/quuixlie/SteganoAI" target="_blank">
+                                            <div>
+                                                <h1>SteganoAI</h1>
+                                                <p>Hide your message using steganography and ChatGPT.</p>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="cart">
-                                        <img src="assets/project3.jpeg" alt="third project" draggable="false">
-                                        <div onclick="location.href='https://github.com/quuixlie/SignLanguageImageClassification'">
-                                            <h1>Image classification</h1>
-                                            <p>Sign language recognition in pictures using convolutional neural networks.</p>
-                                        </div>
+                                        <img src="assets/project3.jpg" alt="third project" draggable="false">
+                                        <a href="https://github.com/quuixlie/SignLanguageImageClassification" target="_blank">
+                                            <div>
+                                                <h1>Image classification</h1>
+                                                <p>Sign language recognition in pictures using convolutional neural networks.</p>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="cart">
-                                        <img src="assets/project4.jpeg" alt="third project" draggable="false">
-                                        <div onclick="location.href='https://github.com/quuixlie/Hex-game-queries'">
-                                            <h1>Hex game queries</h1>
-                                            <p>A project I was supposed to do at university with attached instructions.</p>
-                                        </div>
+                                        <img src="assets/project4.jpg" alt="third project" draggable="false">
+                                        <a href="https://github.com/quuixlie/Hex-game-queries" target="_blank">
+                                            <div>
+                                                <h1>Hex game queries</h1>
+                                                <p>A project I was supposed to do at university with attached instructions.</p>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                                 <div id="arrow-left">
@@ -140,17 +175,28 @@
                         </div>
                     </div>
                     <div id="github-button" class="reveal">
-                        <button class="ghost-button" onclick="location.href='https://github.com/quuixlie'">Github</button>
+                        <a href="https://github.com/quuixlie" target="_blank">
+                            <button class="ghost-button">Github</button>
+                        </a>
                     </div> 
             </section>
         </main>
+
         <footer>
             <p>&copy; <script>document.write(new Date().getFullYear())</script> quuixlie, all rights reserved.</p>
             <div id="footer-social-media">
-                <img class="icon" src="assets/twitter.png" alt="twitter icon" onclick="location.href='https://x.com/quuixlie'">
-                <img class="icon" src="assets/github.png" alt="github icon" onclick="location.href='https://github.com/quuixlie'">
-                <img class="icon" src="assets/instagram.png" alt="instagram icon" onclick="location.href='https://www.instagram.com/quuixlie'">
-                <img class="icon" src="assets/youtube.png" alt="youtube icon" onclick="location.href='https://youtube.com/@quuixlie'">
+                <a href="https://x.com/quuixlie" target="_blank">
+                    <img class="icon" src="assets/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://github.com/quuixlie" target="_blank">
+                    <img class="icon" src="assets/github.png" alt="github icon">
+                </a>
+                <a href="https://www.instagram.com/quuixlie" target="_blank">
+                    <img class="icon" src="assets/instagram.png" alt="instagram icon">
+                </a>
+                <a href="https://youtube.com/@quuixlie" target="_blank">
+                    <img class="icon" src="assets/youtube.png" alt="youtube icon">
+                </a>
             </div>
         </footer>
         <script type="text/javascript" src="src/scroll-animation.js" defer></script>

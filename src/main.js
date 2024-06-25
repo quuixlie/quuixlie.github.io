@@ -1,17 +1,19 @@
 function openMenu() {
     let menu = document.getElementById("menu");
     menu.style.display = "flex";
+    menu.style.transition = "all 0.7s ease-in-out";
+    menu.style.transform = "translate(0, 0)";
     document.querySelector("body").style.overflow = "hidden";
 }
 
 function closeMenu() {
     let menu = document.getElementById("menu");
-    menu.style.display = "none";
+    menu.style.transition = "all 0.3s ease-in-out";
+    menu.style.transform = "translate(100%, 0)";
     document.querySelector("body").style.overflow = "auto";
 }
 
 // Project showcase
-
 // Drag
 const gallery = document.querySelector("#gallery");
 let isDragging = false;
@@ -31,7 +33,7 @@ const dragStop = () => {
 
 const dragging = (e) => {
     if (!isDragging) return;
-    gallery.scrollLeft = startScrollLeft - (e.pageX - startX) * 2;
+    gallery.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
 }
 
 // prevent menu popup on long press

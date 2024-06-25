@@ -50,6 +50,11 @@ strong {
     font-style: normal;
 }
 
+a:visited, a:link, a:active {
+    text-decoration: none;
+    color: white;
+}
+
 .filled-button {
     background-color: white;
     border: none;
@@ -107,12 +112,12 @@ button {
     transform: scaleX(1);
 }
 
-but:active {
+button:active {
     transform: scale(1.1);
 }
 
 main {
-    margin: 0px 4rem;
+    margin: 0 4rem;
 }
 
 .icon {

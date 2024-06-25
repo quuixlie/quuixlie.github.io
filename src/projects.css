@@ -135,7 +135,7 @@
     box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
-.cart > div {
+.cart div {
     position: absolute;
     bottom: 2rem;
     width: 100%;
@@ -146,11 +146,11 @@
     cursor: pointer;
 }
 
-.cart > div > h1 {
+.cart div > h1 {
     font-size: 2rem;
 }
 
-.cart > div > p {
+.cart div > p {
     font-size: 1rem;
 }
 
@@ -159,7 +159,7 @@
         grid-template-columns: repeat(4, 66.6666%);
     }
 
-    .cart > div {
+    .cart div {
         width: 66.6666%;
     }
 }
@@ -169,7 +169,7 @@
         grid-template-columns: repeat(4, 33.3333%);
     }
 
-    .cart > div {
+    .cart div {
         width: 33.3333%;
     }
 }
