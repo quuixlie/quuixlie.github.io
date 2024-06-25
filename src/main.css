@@ -115,20 +115,6 @@ main {
     margin: 0px 4rem;
 }
 
-.cart {
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    scroll-snap-align: start;
-}
-
-.cart > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25);
-}
-
 .icon {
     height: 2rem;
     width: 2rem;
