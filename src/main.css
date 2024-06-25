@@ -118,6 +118,7 @@ main {
     height: 100%;
     width: 100%;
     cursor: pointer;
+    scroll-snap-align: start;
 }
 
 .cart > img {

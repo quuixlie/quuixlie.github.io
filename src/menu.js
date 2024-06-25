@@ -32,16 +32,7 @@ const dragStop = () => {
 
 const dragging = (e) => {
     if (!isDragging) return;
-    const newScrollLeft = startScrollLeft - (e.pageX - startX);
-
-    if (newScrollLeft <= 0 || newScrollLeft >=
-        gallery.scrollWidth - gallery.offsetWidth) {
-
-        isDragging = false;
-        return;
-    }
-
-    gallery.scrollLeft = newScrollLeft;
+    gallery.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
 gallery.addEventListener("mousedown", dragStart);
@@ -54,11 +45,11 @@ const arrowRight = document.querySelector("#arrow-right");
 const cartWidth = document.querySelector(".cart").offsetWidth;
 
 const previousProject = () => {
-    gallery.scrollLeft -= cartWidth * 1.3;
+    gallery.scrollLeft -= Math.ceil(cartWidth);
 }
 
 const nextProject = () => {
-    gallery.scrollLeft += cartWidth * 1.3;
+    gallery.scrollLeft += Math.ceil(cartWidth);
 }
 
 arrowLeft.addEventListener("click", previousProject);
