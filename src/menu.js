@@ -38,6 +38,9 @@ const dragging = (e) => {
 gallery.addEventListener("mousedown", dragStart);
 gallery.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+gallery.addEventListener("touchstart", dragStart);
+gallery.addEventListener("touchmove", dragging);
+document.addEventListener("touchend", dragStop);
 
 // Buttons
 const arrowLeft = document.querySelector("#arrow-left");

@@ -1,3 +1,10 @@
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+}
+
+
 #about-me {
     margin-top: 15vh;
     margin-bottom: 15vh;
@@ -31,6 +38,17 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+#aside-content div:nth-child(1) p:after {
+    content: "";
+    width: 3px;
+    height: 1rem;
+    background: white;
+    display: inline-block;
+    position: relative;
+    top: 0.125rem;
+    animation: cursor-blink 1s steps(2) infinite;
 }
 
 @media only screen and (min-width: 830px) {
