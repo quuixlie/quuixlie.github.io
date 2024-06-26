@@ -25,7 +25,7 @@ function closeMenu(href="") {
     if (! (href === "")) {
         setTimeout(() => {
             location.href = href;
-        }, 800);
+        }, 700);
     }
 }
 
