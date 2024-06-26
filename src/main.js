@@ -11,7 +11,7 @@ function openMenu() {
     document.querySelector("body").style.overflow = "hidden";
 }
 
-function closeMenu() {
+function closeMenu(href="") {
     let menu = document.getElementById("menu");
     for (const child of menu.children) {
         child.style.opacity = "0";
@@ -20,7 +20,13 @@ function closeMenu() {
         menu.style.transition = "all 0.3s ease-in-out";
         menu.style.transform = "translate(100%, 0)";
     }, 400);
+
     document.querySelector("body").style.overflow = "auto";
+    if (! (href === "")) {
+        setTimeout(() => {
+            location.href = href;
+        }, 800);
+    }
 }
 
 // Project showcase

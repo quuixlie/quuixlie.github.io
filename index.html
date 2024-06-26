@@ -21,24 +21,18 @@
             <img src="assets/menu.png" class="menu-icon" alt="menu" onclick="openMenu()">
             <div id="menu">
                 <div id="menu-header">
-                    <a href="#landing-page">
-                        <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="closeMenu()">
-                    </a>
+                    <img class="menu-icon" src="assets/logo.png" alt="logo" onclick="closeMenu('#landing-page')">
                     <img id="close-menu" class="menu-icon" src="assets/close.png" alt="close" onclick="closeMenu()">
                 </div>
                 <div id="menu-nav">
-                    <a href="#about-me-href">
-                        <div class="menu-nav-item" onclick="closeMenu()">
-                            <h1>About me</h1>
-                            <p>A short story about me</p>
-                        </div>
-                    </a>
-                    <a href="#projects-href">
-                        <div class="menu-nav-item" onclick="closeMenu()">
-                            <h1>Projects</h1>
-                            <p>Some of my best projects</p>
-                        </div>
-                    </a>
+                    <div class="menu-nav-item" onclick="closeMenu('#about-me-href')">
+                        <h1>About me</h1>
+                        <p>A short story about me</p>
+                    </div>
+                    <div class="menu-nav-item" onclick="closeMenu('#projects-href')">
+                        <h1>Projects</h1>
+                        <p>Some of my best projects</p>
+                    </div>
                     <a href="https://x.com/quuixlie" target="_blank">
                         <button class="filled-button" onclick="closeMenu()">Contact</button>
                     </a>
